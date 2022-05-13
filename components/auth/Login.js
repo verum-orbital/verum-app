@@ -17,10 +17,10 @@ class Login extends React.Component {
         const { name, email, password } = this.state;
         firebase.auth().signInWithEmailAndPassword(email, password)
             .then((result) =>  {
-                console.log(result)
+                console.log("loggedIn with result:", result)
             })
             .catch((error) => {
-                console.log(error)
+                console.log("loggedIn with error", error)
             })
     }
 

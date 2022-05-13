@@ -24,10 +24,10 @@ class Register extends React.Component {
                         name, 
                         email
                     })
-                console.log(result)
+                console.log("registered with result", result)
             })
             .catch((error) => {
-                console.log(error)
+                console.log("registered with error", error)
             })
     }
 
