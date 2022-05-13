@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-const styles = {
+export const globalStyles = {
     safeareaview: {
         flex: 1
     }
