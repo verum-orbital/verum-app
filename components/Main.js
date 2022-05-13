@@ -35,9 +35,17 @@ class Main extends React.Component {
 }
 
 const mapStateToProps = (store) => ({
-    currentUser: store.userState.currentUser
+    currentUser: store.user.currentUser
 })
 
-const mapDispatchProps = (dispatch) => bindActionCreators({fetchUser}, dispatch)
- 
-export default connect(mapStateToProps, mapDispatchProps)(Main);
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        fetchUser: () => dispatch(fetchUser()),
+    }
+};
+
+// EQUIVALENT STATEMENT
+// const mapDispatchToProps = (dispatch) => bindActionCreators({fetchUser}, dispatch)
+  
+export default connect(mapStateToProps, mapDispatchToProps)(Main);
