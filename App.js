@@ -87,7 +87,8 @@ class App extends React.Component {
     } 
     
     return ( 
-      <Provider store={store}> // for MainScreen to access redux store
+      // for MainScreen to access redux store
+      <Provider store={store}> 
         <MainScreen />  
       </Provider>
     )
