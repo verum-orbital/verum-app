@@ -32,6 +32,8 @@ import { NavigationContainer } from '@react-navigation/native'
 import LandingScreen from './components/auth/Landing';
 import RegisterScreen from './components/auth/Register';
 import LoginScreen from './components/auth/Login';
+import MainScreen from './components/Main';
+import Main from './components/Main';
 
 const Stack = createStackNavigator();
 
@@ -85,9 +87,9 @@ class App extends React.Component {
     } 
     
     return ( 
-      <SafeAreaView style={styles.safeareaview}>
-        <Text>Log In Success!</Text>
-      </SafeAreaView>
+      <Provider store={store}> // for MainScreen to access redux store
+        <MainScreen />  
+      </Provider>
     )
   }
 }
