@@ -5,6 +5,13 @@ import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 import firebase from "firebase/compat/app"
 import "firebase/compat/auth";
 
+// Redux boilerplate
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import rootReducer from './redux/reducers';
+import thunk from 'redux-thunk'
+const store = createStore(rootReducer, applyMiddleware(thunk));
+
 const firebaseConfig = {
   apiKey: "AIzaSyBgzs5CqaJpcmgjXUvmoKBpPR4_1eOJHxs",
   authDomain: "verum-d3504.firebaseapp.com",
